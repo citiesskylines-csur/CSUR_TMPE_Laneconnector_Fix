@@ -7,8 +7,8 @@
     <ProjectGuid>{F0C6F290-9C1F-428F-B27A-693A3585B30E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AdvancedJunctionRule</RootNamespace>
-    <AssemblyName>AdvancedJunctionRule</AssemblyName>
+    <RootNamespace>CSUR_TMPE_Laneconnector_Fix</RootNamespace>
+    <AssemblyName>CSUR_TMPE_Laneconnector_Fix</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -39,12 +39,6 @@
     <Reference Include="ColossalManaged">
       <HintPath>F:\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\ColossalManaged.dll</HintPath>
     </Reference>
-    <Reference Include="CSUtil.CameraControl">
-      <HintPath>F:\SteamLibrary\steamapps\workshop\content\255710\583429740\CSUtil.CameraControl.dll</HintPath>
-    </Reference>
-    <Reference Include="CSUtil.Commons">
-      <HintPath>F:\SteamLibrary\steamapps\workshop\content\255710\583429740\CSUtil.Commons.dll</HintPath>
-    </Reference>
     <Reference Include="ICities">
       <HintPath>F:\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\ICities.dll</HintPath>
     </Reference>
@@ -56,45 +50,25 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="TMPE.CitiesGameBridge">
-      <HintPath>F:\SteamLibrary\steamapps\workshop\content\255710\583429740\TMPE.CitiesGameBridge.dll</HintPath>
-    </Reference>
-    <Reference Include="TMPE.GenericGameBridge">
-      <HintPath>F:\SteamLibrary\steamapps\workshop\content\255710\583429740\TMPE.GenericGameBridge.dll</HintPath>
-    </Reference>
-    <Reference Include="TrafficManager">
-      <HintPath>F:\SteamLibrary\steamapps\workshop\content\255710\583429740\TrafficManager.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine">
       <HintPath>F:\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdvancedJunctionRule.cs" />
-    <Compile Include="CustomAI\AdvancedJunctionRuleRoadAI.cs" />
+    <Compile Include="CSUR_TMPE_Laneconnector_Fix.cs" />
     <Compile Include="Loader.cs" />
-    <Compile Include="CustomAI\NewCarAI.cs" />
     <Compile Include="CustomAI\NewLaneConnectorTool.cs" />
-    <Compile Include="Util\Localization.cs" />
     <Compile Include="Util\RedirectionHelper.cs" />
     <Compile Include="Util\DebugLog.cs" />
-    <Compile Include="Util\MainDataStore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RoadUI.cs" />
-    <Compile Include="SaveAndRestore.cs" />
-    <Compile Include="AdvancedJunctionRuleThreading.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Locales\en.txt" />
-    <Content Include="Locales\ko.txt" />
-    <Content Include="Locales\zh.txt" />
+    <Compile Include="Threading.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy "D:\Mod\AdvancedJunctionRule\bin\Release\AdvancedJunctionRule.dll"  "F:\SteamLibrary\steamapps\workshop\content\255710\1647686914\AdvancedJunctionRule.dll"
-rd /q /s "F:\SteamLibrary\steamapps\workshop\content\255710\1647686914\Locales"
-mkdir "F:\SteamLibrary\steamapps\workshop\content\255710\1647686914\Locales"
-copy "D:\Mod\AdvancedJunctionRule\Locales\*.txt" "F:\SteamLibrary\steamapps\workshop\content\255710\1647686914\Locales"</PostBuildEvent>
+    <PostBuildEvent>rd /q /s "C:\Users\Administrator\AppData\Local\Colossal Order\Cities_Skylines\Addons\Mods\CSUR_TMPE_Laneconnector_Fix"
+mkdir "C:\Users\Administrator\AppData\Local\Colossal Order\Cities_Skylines\Addons\Mods\CSUR_TMPE_Laneconnector_Fix"
+copy "D:\Mod\CSUR_TMPE_Laneconnector_Fix\bin\Release\CSUR_TMPE_Laneconnector_Fix.dll"  "C:\Users\Administrator\AppData\Local\Colossal Order\Cities_Skylines\Addons\Mods\CSUR_TMPE_Laneconnector_Fix\CSUR_TMPE_Laneconnector_Fix.dll"
+</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

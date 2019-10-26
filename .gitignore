@@ -3,3 +3,9 @@
 *.pdb
 *.cache
 *.xml
+.vs/CSUR_TMPE_Laneconnector_Fix/v16/.suo
+*.lock
+*.ide
+*.CopyComplete
+*.ide-shm
+*.ide-wal

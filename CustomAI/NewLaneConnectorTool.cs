@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace AdvancedJunctionRule.CustomAI
+namespace CSUR_TMPE_Laneconnector_Fix.CustomAI
 {
     public class NewLaneConnectorTool
     {
